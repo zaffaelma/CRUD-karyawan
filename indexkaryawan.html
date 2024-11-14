@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-header">
+                        Menu
+                    </div>
+                    <div class="card-body"> 
+                        <div class="list-group">
+                            <a href="" class="list-group-item">Daftar Karyawan</a>
+                            <a href="" class="list-group-item">Tambah Karyawan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="card">
+                    <h5 class="card-header">Tambah Karyawan</h5>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="nama" placeholder="masukkan nama karyawan" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Masa Kerja</label>
+                            <select class="form-select" id="masaKerja" onchange="listGaji()" required>
+                                <option value="">Pilih Masa Kerja</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Induk</label>
+                            <input type="number" class="form-control" id="nomorInduk" placeholder="masukkan NIK Karyawan" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="gaji" class="form-label">Gaji</label>
+                            <input type="value" class="form-control" id="gaji" placeholder="Masukkan Gaji Karyawan" salary>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <button type="button" class="btn btn-primary" onclick="tambahKaryawan()">Simpan</button>
+                            <button type="button" class="btn btn-secondary" onclick="cancel()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mt-3">
+                    <div class="card-header">
+                        Tambah Karyawan
+                    </div>
+                    <table class="table" id="tblKaryawan">
+                        <thead>
+                          <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>NIK</th>
+                            <th>Masa Kerja</th>
+                            <th>Gaji</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>     
+    <script src="daftarkaryawan.js"></script>
+</body>
+</html>
